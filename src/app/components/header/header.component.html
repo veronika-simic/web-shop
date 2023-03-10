@@ -1,0 +1,7 @@
+<mat-toolbar class="max-w-7xl mx-auto border-x justify-between">
+    <a routerLink="home">Discordia</a>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon [matBadge]="1" matBadgeColor="warn">shopping_cart</mat-icon>
+    </button>
+   <mat-menu #menu="matMenu"></mat-menu>
+</mat-toolbar>
