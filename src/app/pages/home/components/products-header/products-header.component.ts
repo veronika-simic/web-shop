@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   ]
 })
 export class ProductsHeaderComponent {
+  sort = "desc"
 
+
+  onSortUpdated(newSort: string):void {
+    this.sort = newSort
+  }
 }
