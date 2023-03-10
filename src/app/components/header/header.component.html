@@ -1,7 +1,20 @@
 <mat-toolbar class="max-w-7xl mx-auto border-x justify-between">
-    <a routerLink="home">Discordia</a>
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon [matBadge]="1" matBadgeColor="warn">shopping_cart</mat-icon>
-    </button>
-   <mat-menu #menu="matMenu"></mat-menu>
+  <a routerLink="home">Discordia</a>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon [matBadge]="1" matBadgeColor="warn">shopping_cart</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <div class="p-3 divide-y divide-solid">
+      <div class="pb-3 flex justify-between">
+        <span class="mr-16">1 Items</span>
+        <a routerLink="cart">View Cart</a>
+      </div>
+      <div class="py-3">
+        <div class="flex justify-between font-light mb-2">
+          Te regalo la lluvia x 1
+          <span class="font-bold">{{ "25" | currency }}</span>
+        </div>
+      </div>
+    </div>
+  </mat-menu>
 </mat-toolbar>
