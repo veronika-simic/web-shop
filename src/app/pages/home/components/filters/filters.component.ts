@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from "@angular/core";
 
 @Component({
-  selector: 'app-filters',
-  templateUrl: './filters.component.html' 
+  selector: "app-filters",
+  templateUrl: "./filters.component.html",
 })
 export class FiltersComponent {
-  categories = ['ranchera', 'cumbia', 'pop']
+  @Output() categoryChange = new EventEmitter<string>();
+  categories = ["ranchera", "cumbia", "pop"];
+
+  onCategoryChanged(category: string): void {
+    this.categoryChange.emit(category);
+  }
 }
