@@ -8,9 +8,13 @@ import { Component } from '@angular/core';
 })
 export class ProductsHeaderComponent {
   sort = "desc"
-
+  itemsShowCount = 12;
 
   onSortUpdated(newSort: string):void {
     this.sort = newSort
+  }
+
+  onItemsUpdated(count: number):void {
+    this.itemsShowCount= count;
   }
 }
