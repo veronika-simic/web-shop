@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-import { Cart } from "app/models/cart.model";
+import { Component, OnInit } from "@angular/core";
+import { Cart, CartItem } from "app/models/cart.model";
 
 @Component({
   selector: "app-cart",
@@ -24,4 +24,13 @@ export class CartComponent {
       },
     ],
   };
+
+  dataSource: CartItem[] = [];
+  displayedColumns: string[] = ['product', 'name', 'price', 'quantity', 'total', 'action'];
+
+  ngOnInit(): void {
+    this.dataSource = this.cart.items
+  }
+
+
 }
